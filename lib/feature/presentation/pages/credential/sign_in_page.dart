@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/colors.dart';
+import 'package:instagram_clone/feature/presentation/pages/credential/singuppages/username.dart';
 import 'package:instagram_clone/feature/presentation/widget/button_widget.dart';
 import 'package:instagram_clone/feature/presentation/widget/form_widget.dart';
 class SignInPage extends StatelessWidget {
@@ -24,22 +25,28 @@ class SignInPage extends StatelessWidget {
                  
                   //logo
                  Image.asset(
-                 'images/logo4.png',
+                 'assets/logo4.png',
                  width:50,
                  ),
                  verticalSpace(110),
                     
                  //form
                     
-                 FormWidget(
-                  hintText: 'Email',
-                  checkPassword: false,
+                 SizedBox(
+                  height: 40,
+                   child: FormWidget(
+                    hintText: 'Email',
+                    checkPassword: false,
+                   ),
                  ),
                  verticalSpace(10),
                     
-                 FormWidget(
-                  hintText: 'Password',
-                  checkPassword: true,
+                 SizedBox(
+                  height: 40,
+                   child: FormWidget(
+                    hintText: 'Password',
+                    checkPassword: true,
+                   ),
                  ),
                  verticalSpace(10),
             
@@ -51,9 +58,16 @@ class SignInPage extends StatelessWidget {
                   color: blueColor,
                   buttonText: 'Sign in',
                   tapListner: (){},
+                  borderRadius: BorderRadius.circular(6),
+
+
                  ),
                  verticalSpace(10),
-                 Text('Forgotten password?'),
+                 Text('Forgotten password?',
+                 style: TextStyle(
+                  color: textColor,
+                 ),
+                 ),
                 Flexible(
                   flex: 3,
                   child: Container(),
@@ -63,6 +77,10 @@ class SignInPage extends StatelessWidget {
                   color: Colors.transparent,
                   buttonText: 'Create new account',
                   borderColor: Color.fromARGB(255, 17, 26, 161),
+                  borderRadius: BorderRadius.circular(20),
+                  tapListner: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>UsernamePage()));
+                  },
     
                 )
                 

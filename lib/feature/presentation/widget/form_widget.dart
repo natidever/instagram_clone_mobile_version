@@ -9,6 +9,7 @@ class FormWidget extends StatefulWidget {
  final TextEditingController ?controller;
  final bool ?checkPassword;//for isPassword
  
+ 
  bool obscureText=true;
 
  FormWidget({
@@ -23,9 +24,11 @@ class FormWidget extends StatefulWidget {
  );
 
 
+
   @override
   State<FormWidget> createState() => _FormWidgetState();
 }
+//  bool checkEmpty=false;
 
 class _FormWidgetState extends State<FormWidget> {
   @override
@@ -34,18 +37,30 @@ class _FormWidgetState extends State<FormWidget> {
       width: double.infinity,
       decoration: BoxDecoration(
         color: secondaryColor.withOpacity(.35),
-        borderRadius: BorderRadius.circular(10)
+        borderRadius: BorderRadius.circular(5)
       ),
       child: TextFormField(
+          // onChanged: (value) {
+
+          //     setState(() {
+          //      checkEmpty=value.isNotEmpty;
+                
+          //     });
+
+          // },
           obscureText: widget.checkPassword ==true? widget.obscureText : false,
           decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(vertical: 20,horizontal: 20),
           hintText: widget.hintText,
           
+          
+          
           border: InputBorder.none,
           hintStyle: TextStyle(
             color: secondaryColor,
             fontSize: 13,
+            
+            
           ),
           suffixIcon: IconButton(
             onPressed: (){

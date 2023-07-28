@@ -9,6 +9,7 @@ final String? buttonText;
 final Color? color;
 final VoidCallback?tapListner;
 final Color ?borderColor;
+final BorderRadius ? borderRadius;
 
   const ButtonWidget({
     super.key,
@@ -16,6 +17,7 @@ final Color ?borderColor;
     this.color,
     this.tapListner,
     this.borderColor,
+    this.borderRadius,
 
     });
 
@@ -23,6 +25,7 @@ final Color ?borderColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: tapListner,
       child: Container(
         width: double.infinity,
         height: 35,
@@ -34,9 +37,16 @@ final Color ?borderColor;
 
           ),
           color: color,
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: borderRadius,
         ),
-        child: Center(child: Text('$buttonText')),
+        child: Center(child: Text(
+          '$buttonText',
+          style:TextStyle(
+             color: textColor,
+          ),
+          
+          )
+          ),
       ),
     );
   }
