@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:instagram_clone/colors.dart';
 import 'package:instagram_clone/feature/presentation/pages/credential/singuppages/username.dart';
+import 'package:instagram_clone/feature/presentation/pages/main_screen/main_screen.dart';
 import 'package:instagram_clone/feature/presentation/widget/button_widget.dart';
 import 'package:instagram_clone/feature/presentation/widget/form_widget.dart';
+import 'package:flutter_svg/svg.dart';
+
 class SignInPage extends StatelessWidget {
  
 
@@ -25,9 +29,10 @@ class SignInPage extends StatelessWidget {
                  
                   //logo
                  Image.asset(
-                 'assets/logo4.png',
+                 'assets/finallogo2.png',
                  width:50,
                  ),
+
                  verticalSpace(110),
                     
                  //form
@@ -57,7 +62,9 @@ class SignInPage extends StatelessWidget {
                  ButtonWidget(
                   color: blueColor,
                   buttonText: 'Sign in',
-                  tapListner: (){},
+                  tapListner: (){
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => MainPage())));
+                  },
                   borderRadius: BorderRadius.circular(6),
 
 

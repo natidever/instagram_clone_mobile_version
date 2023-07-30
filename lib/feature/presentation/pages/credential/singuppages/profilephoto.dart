@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:instagram_clone/colors.dart';
+import 'package:instagram_clone/feature/presentation/pages/main_screen/main_screen.dart';
 import 'package:instagram_clone/feature/presentation/widget/button_widget.dart';
 import 'package:instagram_clone/feature/presentation/widget/customtextbutton.dart';
 
@@ -57,12 +58,17 @@ class ProfilePicturePage extends StatelessWidget {
                     verticalSpace(20),
                     TextButton(
                       onPressed: (){},
-                       child: Text(
-                          'Skip',
-                          style: TextStyle(
-                            color: darkblueColor,
-                            fontFamily: 'Roboto-Bold'
-                          ),
+                       child: TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>MainPage()));
+                        },
+                         child: Text(
+                            'Skip',
+                            style: TextStyle(
+                              color: darkblueColor,
+                              fontFamily: 'Roboto-Bold'
+                            ),
+                         ),
                        ),
                     )
                     // CustomTextButton(
