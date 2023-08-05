@@ -28,7 +28,9 @@ class ProfilePicturePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontFamily: "Roboto-Bolde",
-                      letterSpacing: 0.5
+                      letterSpacing: 0.5,
+                        color: primaryColor
+
                     ),
 
                     

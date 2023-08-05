@@ -29,6 +29,7 @@ class _UsernamePageState extends State<UsernamePage> {
                   style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'Roboto',
+                    color: primaryColor
                   ),
                 ),
               ),

@@ -30,6 +30,7 @@ class _EmailPageState extends State<EmailPage> {
                   style: TextStyle(
                     fontSize: 25,
                     fontFamily: 'Roboto',
+                      color: primaryColor
                   ),
                 ),
               ),

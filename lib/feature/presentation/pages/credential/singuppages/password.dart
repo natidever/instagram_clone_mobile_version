@@ -28,6 +28,8 @@ class _PasswordPageState extends State<PasswordPage> {
                   "Create a password",
                   style: TextStyle(
                     fontSize: 25,
+                      color: primaryColor
+
                   ),
                 ),
               ),

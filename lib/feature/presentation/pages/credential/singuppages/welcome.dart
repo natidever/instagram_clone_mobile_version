@@ -39,6 +39,8 @@ class _WelcomePageState extends State<WelcomePage> {
                   // fontWeight: FontWeight.BOLD
                   fontSize: 22,
                   fontFamily: 'Roboto',
+                    color: primaryColor
+
                    
                   // fontSize: 
                 ),
