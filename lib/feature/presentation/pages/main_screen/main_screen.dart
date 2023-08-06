@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/colors.dart';
+import 'package:instagram_clone/feature/presentation/pages/main_screen/profile/profile_page.dart';
+import 'package:instagram_clone/feature/presentation/pages/main_screen/search_page/search.dart';
 
 import 'home_page/home_page.dart';
 
@@ -72,10 +74,10 @@ void goTo(int index){
           onPageChanged: onPageChange,
           children: [
            HomePage(),
-            Center(child: Text("Search",style: TextStyle(color: primaryColor),),),
+            SearchPage(),
             Center(child: Text("Post",style: TextStyle(color: primaryColor),),),
             Center(child: Text("Activity",style: TextStyle(color: primaryColor),),),
-            Center(child: Text("Account",style: TextStyle(color: primaryColor),),),
+            ProfilePage(),
     
           
         ]),
